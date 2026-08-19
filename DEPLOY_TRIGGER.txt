@@ -1,0 +1,2 @@
+Trigger de deploy Vercel
+2026-08-19
