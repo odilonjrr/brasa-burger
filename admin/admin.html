@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0D0B0A">
+  <title>Brasa Burger — Painel de Gestão</title>
+  <link rel="stylesheet" href="admin.css">
+  <style id="authGuardStyle">body{visibility:hidden}</style>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Navegação principal">
+      <div class="brand-area"><div class="brand-fallback" aria-hidden="true"><span class="brand-mark">🔥</span></div><div class="brand-copy"><strong>BRASA</strong><small>PAINEL DE GESTÃO</small></div></div>
+      <nav id="sidebarNav" class="sidebar-nav">
+        <button class="nav-item active" data-page="overview"><span class="nav-icon">▦</span><span>Visão geral</span></button>
+        <button class="nav-item" data-page="orders"><span class="nav-icon">◫</span><span>Pedidos</span><b class="nav-badge">4</b></button>
+        <button class="nav-item" data-page="bot"><span class="nav-icon">✦</span><span>Atendimento IA</span><b class="ai-badge">DM</b></button>
+        <button class="nav-item" data-page="products"><span class="nav-icon">🍔</span><span>Produtos</span></button>
+        <button class="nav-item" data-page="categories"><span class="nav-icon">▤</span><span>Categorias</span></button>
+        <button class="nav-item" data-page="addons"><span class="nav-icon">＋</span><span>Adicionais</span></button>
+        <button class="nav-item" data-page="coupons"><span class="nav-icon">％</span><span>Cupons</span></button>
+        <button class="nav-item" data-page="delivery"><span class="nav-icon">⌖</span><span>Áreas de entrega</span></button>
+        <button class="nav-item" data-page="banners"><span class="nav-icon">▥</span><span>Banners e promoções</span></button>
+        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span><span>Configurações</span></button>
+      </nav>
+      <div class="sidebar-footer"><div class="store-card"><div class="store-state"><i id="sideStoreDot"></i><div><strong id="sideStoreTitle">Loja aberta</strong><small id="sideStoreSub">Recebendo pedidos</small></div></div><a href="../index.html">← Ver loja</a></div></div>
+    </aside>
+    <div id="mobileBackdrop" class="mobile-backdrop"></div>
+    <div class="main-wrap">
+      <header class="topbar"><button id="menuButton" class="icon-button mobile-menu" aria-label="Abrir menu">☰</button><div class="page-heading"><small>HOMOLOGAÇÃO ONLINE</small><h1 id="pageTitle">VISÃO GERAL</h1></div><div class="top-actions"><label class="global-search"><span>⌕</span><input id="globalSearch" aria-label="Buscar pedido ou cliente" placeholder="Buscar pedido, cliente…"></label><button id="soundButton" class="icon-button active" title="Som de novos pedidos" aria-pressed="true">🔊</button><button id="notificationButton" class="icon-button has-badge" title="Notificações">♢<b>3</b></button><button id="profileButton" class="profile-button"><span class="avatar">OJ</span><span class="profile-copy"><strong>Odilon Junior</strong><small>Administrador</small></span><span class="chev">⌄</span></button></div></header>
+      <main id="pageContent" class="page-content" tabindex="-1"></main>
+    </div>
+    <div id="overlayBackdrop" class="overlay-backdrop"></div><aside id="drawer" class="drawer" aria-hidden="true"></aside><section id="modal" class="modal-shell" aria-hidden="true"><div class="modal-card" id="modalCard"></div></section><div id="toastStack" class="toast-stack" aria-live="polite"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="/shared/supabase.js"></script>
+  <script>(async()=>{const ok=await BrasaSupabase.init();if(!ok){document.body.style.visibility='visible';return}const s=await BrasaSupabase.session();if(!s){location.replace('/login?return=/admin/admin.html');return}const role=await BrasaSupabase.getStaffRole();if(!role){location.replace('/login?return=/admin/admin.html');return}document.body.dataset.staffRole=role;document.body.style.visibility='visible';})();</script>
+  <script src="admin.js"></script>
+</body></html>
