@@ -3,141 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0b0b">
-  <title>Brasa Burger Co. — Delivery</title>
+  <meta name="theme-color" content="#090909">
+  <title>Brasa Burger Co. — Delivery Premium</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reference.css">
 </head>
 <body>
-  <header class="store-header">
-    <div class="header-inner">
-      <a class="brand" href="#inicio" aria-label="Brasa Burger Co.">
-        <span class="brand-icon">🍔</span>
-        <span class="brand-copy"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span>
-      </a>
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a class="active" href="#inicio">INÍCIO</a>
-        <a href="#cardapio">CARDÁPIO</a>
-        <a href="#ofertas">OFERTAS</a>
-        <a href="#sobre">SOBRE</a>
-        <a href="#contato">CONTATO</a>
-      </nav>
-      <div class="header-actions">
-        <a class="login-link" href="/login">ENTRAR</a>
-        <button class="order-online" id="openCart">PEDIR ONLINE <span>🛍</span><b id="cartCount">0</b></button>
-      </div>
-    </div>
-  </header>
-
-  <main id="inicio">
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <div class="hero-script">Desejando algo</div>
-          <h1><span>DELICIOSOS</span><strong>BURGERS</strong></h1>
-          <div class="hero-pill"><span>QUENTE</span><i>•</i><span>FRESCO</span><i>•</i><span>SABOROSO</span></div>
-          <p>Hambúrgueres artesanais feitos com ingredientes premium, chapa quente e muito sabor em cada mordida.</p>
-          <div class="hero-actions">
-            <a class="primary-cta" href="#cardapio">PEDIR AGORA <span>→</span></a>
-            <button class="watch-btn" id="trackBtn"><span class="play">▶</span> ACOMPANHAR PEDIDO</button>
-          </div>
-        </div>
-        <div class="hero-seal"><span>100%</span><small>FRESCO &<br>PREMIUM</small></div>
-      </div>
-
-      <section class="category-panel" id="categories" aria-label="Categorias">
-        <button class="cat active" data-cat="Todos"><span>🍔</span><b>BURGERS</b><small>Artesanais & suculentos</small></button>
-        <button class="cat" data-cat="Acompanhamentos"><span>🍟</span><b>PORÇÕES</b><small>Crocantes & douradas</small></button>
-        <button class="cat" data-cat="Combos"><span>🥤</span><b>COMBOS</b><small>Completo & econômico</small></button>
-        <button class="cat" data-cat="Bebidas"><span>🥤</span><b>BEBIDAS</b><small>Geladas & refrescantes</small></button>
-        <button class="cat" data-cat="Sobremesas"><span>🍰</span><b>SOBREMESAS</b><small>Doces & irresistíveis</small></button>
-        <button class="cat" data-cat="Todos"><span>🔥</span><b>DESTAQUES</b><small>Os queridinhos da casa</small></button>
-      </section>
-    </section>
-
-    <section class="bestsellers" id="cardapio">
-      <div class="section-heading">
-        <div class="eyebrow-script">Favoritos da casa</div>
-        <h2>NOSSOS <span>MAIS VENDIDOS</span></h2>
-        <div class="heading-line"><i></i><b></b><i></i></div>
-      </div>
-      <div class="menu-toolbar">
-        <span id="menuCount">Cardápio completo</span>
-        <label class="store-search"><span>⌕</span><input id="storeSearch" placeholder="Buscar no cardápio" autocomplete="off"></label>
-      </div>
-      <div class="product-grid" id="productGrid"></div>
-    </section>
-
-    <section class="promo-banner" id="ofertas">
-      <div class="promo-copy"><small>COM FOME?</small><h3>NÓS LEVAMOS<br>ATÉ VOCÊ!</h3></div>
-      <div class="promo-scooter">🛵</div>
-      <div class="promo-discount"><small>USE O CUPOM</small><strong>15%</strong><span>OFF</span><p>no seu pedido hoje</p><b>BRASA15</b></div>
-    </section>
-
-    <section class="about-strip" id="sobre">
-      <div><span>🔥</span><b>FEITO NA HORA</b><small>Blend artesanal na chapa</small></div>
-      <div><span>🛵</span><b>ENTREGA RÁPIDA</b><small>35–50 minutos</small></div>
-      <div><span>📍</span><b>RETIRADA GRÁTIS</b><small>Rua das Brasas, 147</small></div>
-      <div><span>💳</span><b>PAGAMENTO FÁCIL</b><small>Pix, dinheiro ou cartão</small></div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="contato">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a class="brand footer-logo" href="#inicio"><span class="brand-icon">🍔</span><span class="brand-copy"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span></a>
-        <p>Servimos comida de verdade, feita na hora e entregue quente. Seu burger, do jeito certo.</p>
-        <div class="socials"><a href="#">f</a><a href="#">◎</a><a href="#">▶</a><a href="#">♪</a></div>
-      </div>
-      <div><h4>LINKS RÁPIDOS</h4><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#ofertas">Ofertas</a><a href="#sobre">Sobre</a></div>
-      <div><h4>ATENDIMENTO</h4><button id="footerTrack">Meus pedidos</button><a href="#">Entrega</a><a href="#">Perguntas frequentes</a><a href="#">Termos & condições</a></div>
-      <div><h4>CONTATO</h4><p>📞 (11) 99999-2026</p><p>✉ contato@brasaburger.com.br</p><p>📍 Rua das Brasas, 147 — Centro</p></div>
-    </div>
-    <div class="copyright">© 2026 Brasa Burger Co. Todos os direitos reservados.</div>
-  </footer>
-
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
-    <div class="drawer-head"><div><small>SEU PEDIDO</small><h3>Carrinho</h3></div><button class="icon-btn" id="closeCart">×</button></div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="coupon-row"><input id="couponInput" placeholder="Cupom de desconto"><button id="applyCoupon">Aplicar</button></div>
-    <div class="cart-summary"><div><span>Subtotal</span><b id="subtotal">R$ 0,00</b></div><div class="discount-line"><span>Desconto</span><b id="discount">− R$ 0,00</b></div><div><span>Taxa estimada</span><b id="fee">R$ 0,00</b></div><div class="total-line"><span>Total</span><b id="total">R$ 0,00</b></div></div>
-    <button class="primary-btn full" id="checkoutBtn">Finalizar pedido</button>
-  </aside>
-  <div class="backdrop" id="backdrop"></div>
-
-  <div class="product-modal" id="productModal" role="dialog" aria-modal="true">
-    <button class="modal-close" id="closeProduct">×</button>
-    <div class="product-modal-image"><img id="modalImage" alt=""></div>
-    <div class="product-modal-body">
-      <span class="eyebrow" id="modalCat"></span><h2 id="modalName"></h2><p id="modalDesc"></p><div class="base-price" id="modalBase"></div>
-      <div class="option-block"><div class="option-title"><b>Adicionais</b><small>Escolha até 3</small></div><div id="extrasOptions"></div></div>
-      <div class="option-block"><div class="option-title"><b>Remover ingredientes</b><small>Opcional</small></div><div id="removeOptions"></div></div>
-      <label class="notes"><span>Observação</span><textarea id="notes" maxlength="140" placeholder="Ex.: sem cebola, molho separado..."></textarea></label>
-      <div class="modal-footer"><div class="qty"><button id="qtyMinus">−</button><b id="qtyValue">1</b><button id="qtyPlus">+</button></div><button class="primary-btn" id="addToCart">Adicionar • <span id="modalTotal">R$ 0,00</span></button></div>
-    </div>
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="#inicio"><span class="brand-mark"><span>🍔</span></span><span class="brand-text"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span></a>
+    <nav class="desktop-nav"><a class="active" href="#inicio">INÍCIO</a><a href="#cardapio">CARDÁPIO</a><a href="#ofertas">OFERTAS</a><a href="#sobre">SOBRE NÓS</a><a href="#contato">CONTATO</a></nav>
+    <div class="head-actions"><a class="login-link" href="/login">ENTRAR</a><button class="order-btn" id="openCart">PEDIR ONLINE <span>🛍</span><b id="cartCount">0</b></button></div>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
   </div>
+</header>
 
-  <section class="checkout" id="checkout">
-    <div class="checkout-card">
-      <div class="checkout-top"><div><small>FINALIZAR PEDIDO</small><h2>Quase lá</h2></div><button id="closeCheckout" class="icon-btn">×</button></div>
-      <div class="steps"><span class="active" data-step="1">1 <i>Dados</i></span><span data-step="2">2 <i>Entrega</i></span><span data-step="3">3 <i>Pagamento</i></span><span data-step="4">4 <i>Revisão</i></span></div>
-      <div class="step-pane active" data-pane="1"><h3>Quem vai receber?</h3><div class="form-grid"><label>Nome<input id="cName"></label><label>WhatsApp<input id="cPhone"></label><label class="wide">E-mail<input id="cEmail" type="email"></label></div></div>
-      <div class="step-pane" data-pane="2"><h3>Como quer receber?</h3><div class="toggle-choice"><button class="active" data-mode="delivery">Entrega</button><button data-mode="pickup">Retirada grátis</button></div><div id="deliveryFields" class="form-grid"><label class="wide">Bairro<select id="bairro"><option value="Centro">Centro — R$ 6,90</option><option value="Jardins">Jardins — R$ 8,90</option><option value="Vila Nova">Vila Nova — R$ 5,90</option></select></label><label class="wide">Endereço<input placeholder="Rua, número"></label><label>Complemento<input placeholder="Apto, bloco..."></label><label>Referência<input placeholder="Próximo a..."></label></div></div>
-      <div class="step-pane" data-pane="3"><h3>Pagamento na entrega ou retirada</h3><div class="pay-grid"><button class="pay active">◆ <span>Pix</span></button><button class="pay">💵 <span>Dinheiro</span></button><button class="pay">▰ <span>Débito</span></button><button class="pay">▣ <span>Crédito</span></button></div></div>
-      <div class="step-pane" data-pane="4"><h3>Revise antes de enviar</h3><div class="review" id="reviewBox"></div></div>
-      <div class="checkout-bottom"><button class="secondary-btn" id="prevStep">Voltar</button><button class="primary-btn" id="nextStep">Continuar →</button></div>
+<main id="inicio">
+  <section class="hero">
+    <div class="embers"></div>
+    <div class="hero-wrap">
+      <div class="hero-copy">
+        <p class="script">Desejando algo</p>
+        <h1><span>DELICIOSOS</span><strong>BURGERS</strong></h1>
+        <div class="taste-pill"><span>QUENTE</span><i>•</i><span>FRESCO</span><i>•</i><span>SABOROSO</span></div>
+        <p class="hero-desc">Hambúrgueres artesanais feitos na chapa com ingredientes premium, cheddar derretendo, bacon crocante e aquele sabor defumado que faz pedir de novo.</p>
+        <div class="hero-actions"><a class="cta-primary" href="#cardapio">PEDIR AGORA <b>→</b></a><button class="cta-ghost" id="trackBtn"><span>▶</span> ACOMPANHAR PEDIDO</button></div>
+      </div>
+      <div class="hero-food">
+        <div class="orange-glow"></div>
+        <img class="fries-img" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=720&q=88" alt="Batata frita">
+        <img class="drink-img" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=620&q=88" alt="Refrigerante gelado">
+        <img class="burger-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=92" alt="Hambúrguer premium Brasa Burger">
+        <div class="quality-seal"><span class="stars">★ ★ ★</span><strong>100%</strong><small>FRESCO &<br>PREMIUM</small><span class="stars bottom">★ ★ ★</span></div>
+      </div>
+    </div>
+    <div class="category-shell">
+      <div class="category-panel" id="categories">
+        <button class="cat active" data-cat="Todos"><span class="sticker">🍔</span><b>BURGERS</b><small>Suculentos & artesanais</small></button>
+        <button class="cat" data-cat="Acompanhamentos"><span class="sticker">🍟</span><b>PORÇÕES</b><small>Crocantes & douradas</small></button>
+        <button class="cat" data-cat="Combos"><span class="sticker">🥡</span><b>COMBOS</b><small>Mais sabor, melhor preço</small></button>
+        <button class="cat" data-cat="Bebidas"><span class="sticker">🥤</span><b>BEBIDAS</b><small>Geladas & refrescantes</small></button>
+        <button class="cat" data-cat="Sobremesas"><span class="sticker">🍰</span><b>SOBREMESAS</b><small>Doces & irresistíveis</small></button>
+        <button class="cat" data-cat="Todos"><span class="sticker">🔥</span><b>DESTAQUES</b><small>Os queridinhos da casa</small></button>
+      </div>
     </div>
   </section>
 
-  <section class="tracking" id="tracking"><div class="tracking-card"><button class="icon-btn track-close" id="closeTracking">×</button><div class="success-icon">✓</div><small>PEDIDO</small><h2>Seu pedido está confirmado.</h2><p>Estimativa: <b>35–50 min</b>.</p><div class="timeline"><div class="done"><i>✓</i><span><b>Recebido</b><small>Pedido recebido</small></span></div><div class="current"><i>🔥</i><span><b>Em preparação</b><small>A cozinha já começou</small></span></div><div><i>🛵</i><span><b>Saiu para entrega</b><small>Aguardando</small></span></div><div><i>🏠</i><span><b>Entregue</b><small>Aguardando</small></span></div></div></div></section>
+  <section class="bestsellers" id="cardapio">
+    <div class="section-title"><span class="decor left"></span><div><p class="script small">Favoritos da casa</p><h2>NOSSOS <em>MAIS VENDIDOS</em></h2></div><span class="decor right"></span></div>
+    <div class="menu-toolbar"><span id="menuCount">Cardápio completo</span><label class="store-search"><span>⌕</span><input id="storeSearch" placeholder="Buscar no cardápio" autocomplete="off"></label></div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
 
-  <button class="mobile-cart" id="mobileCart"><span>🛍 <b id="mobileCartCount">0 itens</b></span><strong id="mobileCartTotal">R$ 0,00</strong></button>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="/shared/supabase.js"></script>
-  <script src="app.js"></script>
-  <script>document.getElementById('footerTrack')?.addEventListener('click',()=>document.getElementById('trackBtn')?.click())</script>
+  <section class="promo-wrap" id="ofertas">
+    <div class="promo-banner">
+      <div class="promo-left"><span class="hungry">COM FOME?</span><h3>Nós levamos<br><em>até você!</em></h3></div>
+      <div class="promo-center"><span class="speed-line l1"></span><span class="speed-line l2"></span><div class="scooter">🛵</div><div class="delivery-box">BRASA<br><b>BURGER</b></div></div>
+      <div class="promo-right"><small>GANHE</small><div class="off"><strong>15%</strong><b>OFF</b></div><span>NO SEU PEDIDO HOJE</span><code>BRASA15</code></div>
+    </div>
+  </section>
+
+  <section class="why" id="sobre">
+    <article><span>🥬</span><div><b>INGREDIENTES FRESCOS</b><small>Selecionados todos os dias</small></div></article>
+    <article><span>🔥</span><div><b>FEITO NA CHAPA</b><small>Sabor tostado de verdade</small></div></article>
+    <article><span>🛵</span><div><b>ENTREGA RÁPIDA</b><small>Quente até sua porta</small></div></article>
+    <article><span>✓</span><div><b>QUALIDADE PREMIUM</b><small>Do primeiro ao último bite</small></div></article>
+  </section>
+</main>
+
+<footer class="footer" id="contato">
+  <div class="footer-grid">
+    <div class="foot-brand"><a class="brand" href="#inicio"><span class="brand-mark"><span>🍔</span></span><span class="brand-text"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span></a><p>Comida de verdade, feita na hora e entregue quente. Seu burger, do jeito certo.</p><div class="socials"><a href="#">f</a><a href="#">◎</a><a href="#">𝕏</a><a href="#">♪</a><a href="#">▶</a></div></div>
+    <div><h4>LINKS RÁPIDOS</h4><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#ofertas">Ofertas</a><a href="#sobre">Sobre nós</a><a href="#contato">Contato</a></div>
+    <div><h4>ATENDIMENTO</h4><button id="footerTrack">Meus pedidos</button><a href="#sobre">Informações de entrega</a><a href="#">Perguntas frequentes</a><a href="#">Termos & condições</a><a href="#">Privacidade</a></div>
+    <div><h4>CONTATO</h4><p>☎ (11) 99999-2026</p><p>✉ contato@brasaburger.com.br</p><p>⌖ Rua das Brasas, 147 — Centro</p></div>
+    <div><h4>PEÇA ONLINE</h4><button class="app-badge" id="footerOrder">🛍 <span><small>CLIQUE E</small><b>FAÇA SEU PEDIDO</b></span></button><p class="hours">Ter–Dom<br>18:00–23:30</p></div>
+  </div>
+  <div class="copyright">© 2026 Brasa Burger Co. Todos os direitos reservados.</div>
+</footer>
+
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true"><div class="drawer-head"><div><small>SEU PEDIDO</small><h3>Carrinho</h3></div><button class="icon-btn" id="closeCart">×</button></div><div class="cart-items" id="cartItems"></div><div class="coupon-row"><input id="couponInput" placeholder="Cupom de desconto"><button id="applyCoupon">Aplicar</button></div><div class="cart-summary"><div><span>Subtotal</span><b id="subtotal">R$ 0,00</b></div><div class="discount-line"><span>Desconto</span><b id="discount">− R$ 0,00</b></div><div><span>Taxa estimada</span><b id="fee">R$ 0,00</b></div><div class="total-line"><span>Total</span><b id="total">R$ 0,00</b></div></div><button class="primary-btn full" id="checkoutBtn">Finalizar pedido</button></aside>
+<div class="backdrop" id="backdrop"></div>
+
+<div class="product-modal" id="productModal" role="dialog" aria-modal="true"><button class="modal-close" id="closeProduct">×</button><div class="product-modal-image"><img id="modalImage" alt=""></div><div class="product-modal-body"><span class="eyebrow" id="modalCat"></span><h2 id="modalName"></h2><p id="modalDesc"></p><div class="base-price" id="modalBase"></div><div class="option-block"><div class="option-title"><b>Adicionais</b><small>Escolha até 3</small></div><div id="extrasOptions"></div></div><div class="option-block"><div class="option-title"><b>Remover ingredientes</b><small>Opcional</small></div><div id="removeOptions"></div></div><label class="notes"><span>Observação</span><textarea id="notes" maxlength="140" placeholder="Ex.: sem cebola, molho separado..."></textarea></label><div class="modal-footer"><div class="qty"><button id="qtyMinus">−</button><b id="qtyValue">1</b><button id="qtyPlus">+</button></div><button class="primary-btn" id="addToCart">Adicionar • <span id="modalTotal">R$ 0,00</span></button></div></div></div>
+
+<section class="checkout" id="checkout"><div class="checkout-card"><div class="checkout-top"><div><small>FINALIZAR PEDIDO</small><h2>Quase lá</h2></div><button id="closeCheckout" class="icon-btn">×</button></div><div class="steps"><span class="active" data-step="1">1 <i>Dados</i></span><span data-step="2">2 <i>Entrega</i></span><span data-step="3">3 <i>Pagamento</i></span><span data-step="4">4 <i>Revisão</i></span></div><div class="step-pane active" data-pane="1"><h3>Quem vai receber?</h3><div class="form-grid"><label>Nome<input id="cName"></label><label>WhatsApp<input id="cPhone"></label><label class="wide">E-mail<input id="cEmail" type="email"></label></div></div><div class="step-pane" data-pane="2"><h3>Como quer receber?</h3><div class="toggle-choice"><button class="active" data-mode="delivery">Entrega</button><button data-mode="pickup">Retirada grátis</button></div><div id="deliveryFields" class="form-grid"><label class="wide">Bairro<select id="bairro"><option value="Centro">Centro — R$ 6,90</option><option value="Jardins">Jardins — R$ 8,90</option><option value="Vila Nova">Vila Nova — R$ 5,90</option></select></label><label class="wide">Endereço<input placeholder="Rua, número"></label><label>Complemento<input placeholder="Apto, bloco..."></label><label>Referência<input placeholder="Próximo a..."></label></div></div><div class="step-pane" data-pane="3"><h3>Pagamento na entrega ou retirada</h3><div class="pay-grid"><button class="pay active">◆ <span>Pix</span></button><button class="pay">💵 <span>Dinheiro</span></button><button class="pay">▰ <span>Débito</span></button><button class="pay">▣ <span>Crédito</span></button></div></div><div class="step-pane" data-pane="4"><h3>Revise antes de enviar</h3><div class="review" id="reviewBox"></div></div><div class="checkout-bottom"><button class="secondary-btn" id="prevStep">Voltar</button><button class="primary-btn" id="nextStep">Continuar →</button></div></div></section>
+
+<section class="tracking" id="tracking"><div class="tracking-card"><button class="icon-btn track-close" id="closeTracking">×</button><div class="success-icon">✓</div><small>PEDIDO</small><h2>Seu pedido está confirmado.</h2><p>Estimativa: <b>35–50 min</b>.</p><div class="timeline"><div class="done"><i>✓</i><span><b>Recebido</b><small>Pedido recebido</small></span></div><div class="current"><i>🔥</i><span><b>Em preparação</b><small>A cozinha já começou</small></span></div><div><i>🛵</i><span><b>Saiu para entrega</b><small>Aguardando</small></span></div><div><i>🏠</i><span><b>Entregue</b><small>Aguardando</small></span></div></div></div></section>
+
+<button class="mobile-cart" id="mobileCart"><span>🛍 <b id="mobileCartCount">0 itens</b></span><strong id="mobileCartTotal">R$ 0,00</strong></button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="/shared/supabase.js"></script><script src="app.js"></script><script>document.getElementById('footerTrack')?.addEventListener('click',()=>document.getElementById('trackBtn')?.click());document.getElementById('footerOrder')?.addEventListener('click',()=>document.getElementById('openCart')?.click());document.querySelector('.menu-toggle')?.addEventListener('click',()=>document.querySelector('.desktop-nav')?.classList.toggle('open'));</script>
 </body>
 </html>
