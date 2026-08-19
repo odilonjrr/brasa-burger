@@ -3,90 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#ff5b18">
+  <meta name="theme-color" content="#0b0b0b">
   <title>Brasa Burger Co. — Delivery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="promo-top">🔥 <strong>BRASA15</strong> dá 15% OFF no seu pedido hoje</div>
   <header class="store-header">
     <div class="header-inner">
-      <a class="brand-word" href="#inicio" aria-label="Brasa Burger Co.">
-        <span class="brand-fire">BRASA</span><span>BURGER CO.</span>
+      <a class="brand" href="#inicio" aria-label="Brasa Burger Co.">
+        <span class="brand-icon">🍔</span>
+        <span class="brand-copy"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span>
       </a>
-      <div class="delivery-location">
-        <span class="location-icon">⌖</span>
-        <div><small>Entregar em</small><button type="button">Centro, São Paulo <span>⌄</span></button></div>
-      </div>
-      <label class="store-search">
-        <span>⌕</span><input id="storeSearch" placeholder="Buscar no cardápio" autocomplete="off">
-      </label>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="active" href="#inicio">INÍCIO</a>
+        <a href="#cardapio">CARDÁPIO</a>
+        <a href="#ofertas">OFERTAS</a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
       <div class="header-actions">
-        <a href="/login" class="login-link">Entrar</a>
-        <button class="cart-header" id="openCart"><span>🛍</span><span>Carrinho</span><b id="cartCount">0</b></button>
+        <a class="login-link" href="/login">ENTRAR</a>
+        <button class="order-online" id="openCart">PEDIR ONLINE <span>🛍</span><b id="cartCount">0</b></button>
       </div>
     </div>
   </header>
 
-  <main class="store-main" id="inicio">
-    <section class="restaurant-head">
-      <div class="restaurant-avatar">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=88" alt="Brasa Burger">
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="hero-script">Desejando algo</div>
+          <h1><span>DELICIOSOS</span><strong>BURGERS</strong></h1>
+          <div class="hero-pill"><span>QUENTE</span><i>•</i><span>FRESCO</span><i>•</i><span>SABOROSO</span></div>
+          <p>Hambúrgueres artesanais feitos com ingredientes premium, chapa quente e muito sabor em cada mordida.</p>
+          <div class="hero-actions">
+            <a class="primary-cta" href="#cardapio">PEDIR AGORA <span>→</span></a>
+            <button class="watch-btn" id="trackBtn"><span class="play">▶</span> ACOMPANHAR PEDIDO</button>
+          </div>
+        </div>
+        <div class="hero-seal"><span>100%</span><small>FRESCO &<br>PREMIUM</small></div>
       </div>
-      <div class="restaurant-info">
-        <div class="title-row"><h1>Brasa Burger Co.</h1><span class="verified">✓</span></div>
-        <p>Hambúrguer artesanal • Chapa • Fogo & sabor</p>
-        <div class="restaurant-meta"><span>★ <b>4,9</b></span><span>•</span><span>35–50 min</span><span>•</span><span>Entrega a partir de R$ 5,90</span></div>
-      </div>
-      <button class="track-order" id="trackBtn">Acompanhar pedido</button>
+
+      <section class="category-panel" id="categories" aria-label="Categorias">
+        <button class="cat active" data-cat="Todos"><span>🍔</span><b>BURGERS</b><small>Artesanais & suculentos</small></button>
+        <button class="cat" data-cat="Acompanhamentos"><span>🍟</span><b>PORÇÕES</b><small>Crocantes & douradas</small></button>
+        <button class="cat" data-cat="Combos"><span>🥤</span><b>COMBOS</b><small>Completo & econômico</small></button>
+        <button class="cat" data-cat="Bebidas"><span>🥤</span><b>BEBIDAS</b><small>Geladas & refrescantes</small></button>
+        <button class="cat" data-cat="Sobremesas"><span>🍰</span><b>SOBREMESAS</b><small>Doces & irresistíveis</small></button>
+        <button class="cat" data-cat="Todos"><span>🔥</span><b>DESTAQUES</b><small>Os queridinhos da casa</small></button>
+      </section>
     </section>
 
-    <section class="hero-banner" id="promocoes">
-      <div class="hero-copy">
-        <span class="hero-kicker">FEITO NA BRASA. DO JEITO CERTO.</span>
-        <h2>Seu burger favorito,<br><em>quente até a porta.</em></h2>
-        <p>Ingredientes selecionados, blend artesanal e aquele sabor tostado que só a chapa entrega.</p>
-        <div class="hero-actions"><a href="#cardapio" class="hero-primary">Pedir agora</a><span class="hero-coupon">Use <b>BRASA15</b></span></div>
+    <section class="bestsellers" id="cardapio">
+      <div class="section-heading">
+        <div class="eyebrow-script">Favoritos da casa</div>
+        <h2>NOSSOS <span>MAIS VENDIDOS</span></h2>
+        <div class="heading-line"><i></i><b></b><i></i></div>
       </div>
-      <div class="hero-photo"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=90" alt="Hambúrguer Brasa Burger"></div>
-    </section>
-
-    <section class="category-bar" id="categories">
-      <button class="cat active" data-cat="Todos">Todos</button>
-      <button class="cat" data-cat="Mais pedidos">Mais pedidos</button>
-      <button class="cat" data-cat="Hambúrgueres">Hambúrgueres</button>
-      <button class="cat" data-cat="Combos">Combos</button>
-      <button class="cat" data-cat="Porções">Porções</button>
-      <button class="cat" data-cat="Bebidas">Bebidas</button>
-      <button class="cat" data-cat="Sobremesas">Sobremesas</button>
-    </section>
-
-    <section class="menu-section" id="cardapio">
-      <div class="menu-title-row"><div><small>O QUE VAI SER HOJE?</small><h2>Mais pedidos</h2></div><span id="menuCount">Cardápio completo</span></div>
+      <div class="menu-toolbar">
+        <span id="menuCount">Cardápio completo</span>
+        <label class="store-search"><span>⌕</span><input id="storeSearch" placeholder="Buscar no cardápio" autocomplete="off"></label>
+      </div>
       <div class="product-grid" id="productGrid"></div>
     </section>
 
-    <section class="info-strip">
-      <div><span>🛵</span><div><b>Entrega rápida</b><small>35–50 min</small></div></div>
-      <div><span>🔥</span><div><b>Feito na hora</b><small>Nada fica esperando</small></div></div>
-      <div><span>📍</span><div><b>Retirada grátis</b><small>Rua das Brasas, 147</small></div></div>
-      <div><span>💳</span><div><b>Pagamento fácil</b><small>Pix, dinheiro ou cartão</small></div></div>
+    <section class="promo-banner" id="ofertas">
+      <div class="promo-copy"><small>COM FOME?</small><h3>NÓS LEVAMOS<br>ATÉ VOCÊ!</h3></div>
+      <div class="promo-scooter">🛵</div>
+      <div class="promo-discount"><small>USE O CUPOM</small><strong>15%</strong><span>OFF</span><p>no seu pedido hoje</p><b>BRASA15</b></div>
+    </section>
+
+    <section class="about-strip" id="sobre">
+      <div><span>🔥</span><b>FEITO NA HORA</b><small>Blend artesanal na chapa</small></div>
+      <div><span>🛵</span><b>ENTREGA RÁPIDA</b><small>35–50 minutos</small></div>
+      <div><span>📍</span><b>RETIRADA GRÁTIS</b><small>Rua das Brasas, 147</small></div>
+      <div><span>💳</span><b>PAGAMENTO FÁCIL</b><small>Pix, dinheiro ou cartão</small></div>
     </section>
   </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="#inicio"><span class="brand-icon">🍔</span><span class="brand-copy"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span></a>
+        <p>Servimos comida de verdade, feita na hora e entregue quente. Seu burger, do jeito certo.</p>
+        <div class="socials"><a href="#">f</a><a href="#">◎</a><a href="#">▶</a><a href="#">♪</a></div>
+      </div>
+      <div><h4>LINKS RÁPIDOS</h4><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#ofertas">Ofertas</a><a href="#sobre">Sobre</a></div>
+      <div><h4>ATENDIMENTO</h4><button id="footerTrack">Meus pedidos</button><a href="#">Entrega</a><a href="#">Perguntas frequentes</a><a href="#">Termos & condições</a></div>
+      <div><h4>CONTATO</h4><p>📞 (11) 99999-2026</p><p>✉ contato@brasaburger.com.br</p><p>📍 Rua das Brasas, 147 — Centro</p></div>
+    </div>
+    <div class="copyright">© 2026 Brasa Burger Co. Todos os direitos reservados.</div>
+  </footer>
 
   <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
     <div class="drawer-head"><div><small>SEU PEDIDO</small><h3>Carrinho</h3></div><button class="icon-btn" id="closeCart">×</button></div>
     <div class="cart-items" id="cartItems"></div>
     <div class="coupon-row"><input id="couponInput" placeholder="Cupom de desconto"><button id="applyCoupon">Aplicar</button></div>
-    <div class="cart-summary">
-      <div><span>Subtotal</span><b id="subtotal">R$ 0,00</b></div>
-      <div class="discount-line"><span>Desconto</span><b id="discount">− R$ 0,00</b></div>
-      <div><span>Taxa estimada</span><b id="fee">R$ 0,00</b></div>
-      <div class="total-line"><span>Total</span><b id="total">R$ 0,00</b></div>
-    </div>
+    <div class="cart-summary"><div><span>Subtotal</span><b id="subtotal">R$ 0,00</b></div><div class="discount-line"><span>Desconto</span><b id="discount">− R$ 0,00</b></div><div><span>Taxa estimada</span><b id="fee">R$ 0,00</b></div><div class="total-line"><span>Total</span><b id="total">R$ 0,00</b></div></div>
     <button class="primary-btn full" id="checkoutBtn">Finalizar pedido</button>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -121,5 +138,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="/shared/supabase.js"></script>
   <script src="app.js"></script>
+  <script>document.getElementById('footerTrack')?.addEventListener('click',()=>document.getElementById('trackBtn')?.click())</script>
 </body>
 </html>
