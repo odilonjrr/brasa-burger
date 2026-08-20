@@ -1,0 +1,25 @@
+/* Brasa Burger — atualização mobile + CTA pulsante.
+   Carregue este arquivo por ÚLTIMO no <head>, depois de hero-refresh.css:
+   <link rel="stylesheet" href="menu-mobile.css"> */
+
+/* Botão "Pedir agora" pulsante */
+@keyframes ctaPulse{
+  0%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,152,0,.55)}
+  70%{transform:scale(1.045);box-shadow:0 0 0 16px rgba(255,152,0,0)}
+  100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,152,0,0)}
+}
+.cta-primary{animation:ctaPulse 1.8s ease-out infinite}
+
+/* Cardápio: 2 lanches por linha no mobile */
+@media (max-width: 700px){
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:11px}
+  .product-card{min-height:0}
+  .product-image{height:130px}
+  .product-body{padding:12px 11px}
+  .product-body h3{font-size:17px}
+  .product-body p{min-height:0;-webkit-line-clamp:2}
+  .product-bottom{padding-top:12px}
+  .add-round{width:40px;height:40px;font-size:22px}
+  .product-badge{height:24px;min-width:0;padding:0 9px;font-size:8px}
+  .product-category{font-size:8px}
+}
