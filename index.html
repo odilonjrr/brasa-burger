@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="reference.css">
+  <link rel="stylesheet" href="menu-font.css">
+  <link rel="stylesheet" href="hero-refresh.css?v=15">
   <style>
     .whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:75;display:flex;align-items:center;gap:10px;text-decoration:none;filter:drop-shadow(0 12px 26px rgba(0,0,0,.35))}
     .whatsapp-label{background:#111;color:#fff;border:1px solid #2a2a2a;border-radius:13px;padding:10px 13px;display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;opacity:0;transform:translateX(8px);pointer-events:none;transition:.22s;box-shadow:0 10px 30px rgba(0,0,0,.28)}
@@ -20,6 +22,7 @@
     .whatsapp-float:hover .whatsapp-label,.whatsapp-float:focus-visible .whatsapp-label{opacity:1;transform:none}
     .whatsapp-float:hover .whatsapp-button{transform:translateY(-2px) scale(1.04);box-shadow:0 14px 34px rgba(37,211,102,.38)}
     @keyframes waPulse{0%{transform:scale(.85);opacity:.8}70%{transform:scale(1.2);opacity:0}100%{opacity:0}}
+    @media(min-width:981px){.site-header .header-wrap{position:relative!important;display:grid!important;grid-template-columns:auto minmax(0,1fr) auto!important}.site-header .nav-center-shell{position:static!important;width:100%!important;height:88px!important;transform:none!important;display:flex!important;align-items:center!important;justify-content:center!important;pointer-events:none}.site-header .nav-center-shell .desktop-nav{position:static!important;transform:none!important;height:auto!important;margin:0!important;pointer-events:auto}.site-header .head-actions{margin-left:0!important}}
     @media(max-width:720px){.whatsapp-float{right:16px;bottom:86px}.whatsapp-label{display:none}.whatsapp-button{width:54px;height:54px}.whatsapp-button svg{width:29px;height:29px}}
   </style>
 </head>
@@ -27,8 +30,8 @@
 <header class="site-header">
   <div class="header-wrap">
     <a class="brand" href="#inicio"><span class="brand-mark"><span>🍔</span></span><span class="brand-text"><strong><em>BRASA</em> BURGER</strong><small>FOGO. SABOR. REPETE.</small></span></a>
-    <nav class="desktop-nav"><a class="active" href="#inicio">INÍCIO</a><a href="#cardapio">CARDÁPIO</a><a href="#ofertas">OFERTAS</a><a href="#sobre">SOBRE NÓS</a><a href="#contato">CONTATO</a></nav>
-    <div class="head-actions"><a class="login-link" href="/login">ENTRAR</a><button class="order-btn" id="openCart">PEDIR ONLINE <span>🛍</span><b id="cartCount">0</b></button></div>
+    <div class="nav-center-shell"><nav class="desktop-nav"><a class="active" href="#inicio">INÍCIO</a><a href="#cardapio">CARDÁPIO</a><a href="#ofertas">OFERTAS</a><a href="#sobre">SOBRE NÓS</a><a href="#contato">CONTATO</a></nav></div>
+    <div class="head-actions"><button class="track-order-btn" id="trackBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3.5 2"/></svg><span>ACOMPANHAR PEDIDO</span></button><button class="order-btn" id="openCart"><span>PEDIR ONLINE</span><span class="order-bag" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 9V6.5a3 3 0 0 1 6 0V9"/></svg><b id="cartCount">0</b></span></button></div>
     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
   </div>
 </header>
@@ -38,17 +41,15 @@
     <div class="embers"></div>
     <div class="hero-wrap">
       <div class="hero-copy">
-        <p class="script">Desejando algo</p>
-        <h1><span>DELICIOSOS</span><strong>BURGERS</strong></h1>
+        <h1><span>Deliciosos</span><strong>BURGERS</strong></h1>
         <div class="taste-pill"><span>QUENTE</span><i>•</i><span>FRESCO</span><i>•</i><span>SABOROSO</span></div>
         <p class="hero-desc">Hambúrgueres artesanais feitos na chapa com ingredientes premium, cheddar derretendo, bacon crocante e aquele sabor defumado que faz pedir de novo.</p>
-        <div class="hero-actions"><a class="cta-primary" href="#cardapio">PEDIR AGORA <b>→</b></a><button class="cta-ghost" id="trackBtn"><span>▶</span> ACOMPANHAR PEDIDO</button></div>
+        <div class="hero-actions"><a class="cta-primary" href="#cardapio">PEDIR AGORA <b>→</b></a></div>
       </div>
       <div class="hero-food">
-        <div class="orange-glow"></div>
-        <img class="fries-img" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=720&q=88" alt="Batata frita">
-        <img class="drink-img" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=620&q=88" alt="Refrigerante gelado">
-        <img class="burger-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=92" alt="Hambúrguer premium Brasa Burger">
+        <img class="hero-scene" src="/hero-food.webp?v=14" alt="Hambúrguer artesanal Brasa Burger com batatas fritas e refrigerante">
+        <div class="smoke-motion" aria-hidden="true"><img src="/smoke-texture.webp?v=14" alt=""><img src="/smoke-texture.webp?v=14" alt=""><img src="/smoke-texture.webp?v=14" alt=""></div>
+        <img class="hero-foreground" src="/hero-food.webp?v=14" alt="" aria-hidden="true">
         <div class="quality-seal"><span class="stars">★ ★ ★</span><strong>100%</strong><small>FRESCO &<br>PREMIUM</small><span class="stars bottom">★ ★ ★</span></div>
       </div>
     </div>
