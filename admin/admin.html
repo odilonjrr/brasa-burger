@@ -38,3 +38,4 @@
   <script>(async()=>{const ok=await BrasaSupabase.init();if(!ok){document.body.style.visibility='visible';return}const s=await BrasaSupabase.session();if(!s){location.replace('/login?return=/admin/admin.html');return}const role=await BrasaSupabase.getStaffRole();if(!role){location.replace('/login?return=/admin/admin.html');return}document.body.dataset.staffRole=role;document.body.style.visibility='visible';})();</script>
   <script src="admin.js"></script>
 </body></html>
+
